@@ -107,10 +107,49 @@ a:hover {
     blockquote {
         margin-top: 50px;
     }
+    .decade-header {
+        margin-top: 2em;
+        margin-bottom: 0.75em;
+        .decade-title {
+            font-family: redhatdisplay-xtrabold, serif;
+            font-weight: 800;
+            font-size: 1.75rem;
+            margin: 0;
+            color: var(--highlight-color);
+        }
+        .sticky-top {
+            top: 70px;
+            z-index: 1020;
+            background-color: var(--main-bg-color);
+            padding: 0.5em 0;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    .decade-section {
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 1.5em;
+            padding-bottom: 1.5em;
+            border-bottom: 2px solid var(--highlight-color);
+        }
+    }
+    .year-row {
+        display: contents;
+    }
     @media only screen and (max-width: 768px) {
         margin: 0 2%;
         .btn {
             --bs-btn-font-size: var(--body-font-size-mobile);
+        }
+        .decade-header {
+            .decade-title {
+                font-size: 1.25rem;
+            }
+            .sticky-top {
+                top: 62px;
+            }
         }
     }
     li {

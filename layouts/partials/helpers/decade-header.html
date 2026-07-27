@@ -1,0 +1,15 @@
+<div class="decade-header row w-100">
+    <div class="col-12 sticky-top">
+        <h2 id="decade-{{ .age }}" class="decade-title">
+            {{- if eq .age 0 -}}
+                My first ten years
+            {{- else if eq .age 10 -}}
+                My teens
+            {{- else if eq .age 100 -}}
+                Endgame
+            {{- else -}}
+                My {{ .age }}s
+            {{- end -}}
+        </h2>
+    </div>
+</div>
