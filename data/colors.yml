@@ -39,6 +39,6 @@
 - class_name: "freelancing"
   element: "background-color"
   color_name: "#d6d6f0"
-- class_name: "funemployed"
+- class_name: "seattle"
   element: "background-color"
   color_name: "white"
