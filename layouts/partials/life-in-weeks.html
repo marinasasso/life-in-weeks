@@ -48,8 +48,10 @@ There are three main loops in this page, each nested inside the other: Years, We
     {{ break }}
 {{ end }}
 <div class="row mt-3">
-    <div id="decade-0">
-        <div class="col-12 d-flex justify-content-between">
+    <div class="col-12">
+        {{ partial "helpers/decade-header.html" (dict "age" 0) }}
+        <div class="decade-section">
+            <div class="col-12 d-flex justify-content-between">
     {{- /* Start years loop  */ -}}
     {{- range $year := seq $startYear $endYear -}}
         {{ $yearString := printf "%d" $year }}
@@ -60,13 +62,20 @@ There are three main loops in this page, each nested inside the other: Years, We
         {{ $nextYear := printf "%s-%s-%s" $nextYearString $startMonth $startDay }}
         {{ $age := sub $year $startYearInt }}
 
-        {{- /* Start new div for decade navigation  */ -}}
+        {{- /* Start a new row for each year (Buster-style) */ -}}
+        {{ if and (ne $age 0) (gt ($.Store.Get "totalBoxesInRow") 0) (ne (mod $age 10) 0) }}
+            {{ partial "helpers/new-row.html" . }}
+            {{ $.Store.Set "totalBoxesInRow" 0 }}
+        {{ end }}
+
+        {{- /* Start new section for decade navigation  */ -}}
         {{ if ne $age 0 }}
             {{ $decadeDiff := mod $age 10 }}
             {{ if eq $decadeDiff 0 }}
         </div>
-    </div>
-    <div id="decade-{{ $age }}">
+        </div>
+        {{ partial "helpers/decade-header.html" (dict "age" $age) }}
+        <div class="decade-section">
         <div class="col-12 d-flex justify-content-between">
                 {{ $.Store.Set "totalBoxesInRow" 0 }}
             {{ end }}
@@ -205,5 +214,7 @@ There are three main loops in this page, each nested inside the other: Years, We
             {{ $.Store.Set "totalBoxesInRow" 0 }}
         {{ end }}
     {{- end -}}
+        </div>
+        </div>
     </div>
 </div>
