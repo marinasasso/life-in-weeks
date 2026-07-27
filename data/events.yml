@@ -2,23 +2,21 @@
 # The first event should be birth.
 # The date should match start_date in content/index.md.
 #
-"1975-09-19":
+"1964-09-07":
     - headline: "🐣 I was born"
       description: "At the Queen of Angels Hospital in Los Angeles. It was a Catholic Hospital and mom had to argue with the nuns about my last name. They told her she couldn't give me my father's name unless they were married. Mom knew her rights and insisted, and the birth certificate did finally say Marina Louise Bukowski. They took me away from mom right after I was born and put me in the nursery. Mom was surprised by this, by then, old fashioned practice. My four half-sisters had been born back east where they new the baby and mother need to be together as much as possible after birth. My father first saw me through the window, crying and red-faced."
       based: "East Hollywood"
-      doing: "Crying"
+
 
 "1965-12-01":
     - headline: "Mom moved out"
       description: "Moved to a nearby apartment at 5526 Carlton Way, walking distance from Poppa Hank's apartment on De Longpre."
       based: "East Hollywood"
-      doing: "Crying"
 
 "1968-06-01":
     - headline: "Lower Farm commune in New Mexico"
       description: "There were quite a few communes near Placitas:  We lived in Lower Farm, run by a guy known by various names, including Ulysseys S Grant, and Vulcan."
       based: "Placitas"
-      doing: "Playing with a baby goat."
 
 "1969-09-01":
     - headline: "🖍️ Kindergarten, Part 1"
